@@ -1,0 +1,685 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Love One Another</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3375df09-4afb-4017-954f-4d94b8b74e9f" class="page sans"><header><h1 class="page-title">Love One Another</h1></header><div class="page-body"><p id="792c61d2-8319-47a0-ae77-d903a8035f3f" class="">Love is the best guidance<div class="indented"><p id="d4179234-992f-43bb-8793-f753e09a8800" class="">One without wisdom can live on it</p></div></p><p id="a5831de2-24e6-4ab8-8e6c-30f5137a0517" class="">Our God exalts love above all knowledge<div class="indented"><p id="3a17b94b-46fd-4b15-b845-65eee00752f8" class="">Brotherly love, neighborly love, friendly love</p><p id="cd6399e8-b6fe-4211-9010-584e474fb2cc" class="">
+</p></div></p><p id="bac2b3fe-10fa-4eb7-b1cd-3bdcfaacaf5b" class="">Love acts beyond basic expectations<div class="indented"><p id="6a8f3135-ca4d-49b4-86ec-e2c529fdc838" class="">And it sees genuine value all the more</p></div></p><p id="f8457cb7-7f95-4e7d-a364-79182261b1f6" class="">For love is about depth and strength<div class="indented"><p id="ed0421d5-ff8e-48ec-afb8-710be5f0cb75" class="">
+</p></div></p><hr id="01386c78-9840-4023-b7c4-3cd281595e50"/><p id="9abb11b3-71f5-4b7a-8790-b75b2d1b443e" class="">
+</p><p id="b94ab660-dbd5-4c5d-8394-4d0664917f67" class="">Treat your opposers like neighbors<div class="indented"><p id="90373914-28b9-488e-9063-21fc2c0ac0b3" class="">Remind them their Creator loves them also</p><p id="856259dd-de91-47f4-af44-73328f5885f9" class="">
+</p></div></p><p id="f2501c2e-9ae1-4c43-abaf-9afc25939465" class="">Indeed, Our God is greater than wars and grudges<div class="indented"><p id="1cfca88d-83ee-4a1f-a9a6-36c86d687ff5" class="">His love is not hampered by our mutual grievances</p><p id="e1c6f6bc-393e-494f-9e3e-b8ad0481562b" class="">
+</p></div></p><p id="88132f5c-781c-428e-9048-0073011547bf" class="">Relieve the load for another<div class="indented"><p id="294e5cef-d387-488e-9f36-3a8465dc7979" class="">And take on suffering as love</p></div></p><p id="50f2c8a6-378e-474c-8eaf-3ef897f1ec3d" class="">Labor for their health<div class="indented"><p id="a08cc3e3-09dd-41a4-91d6-ac160f6bcc57" class="">Give them your time</p></div></p><p id="d5f4bbab-111e-41fd-bbbd-a04072af9e22" class="">And what you value<div class="indented"><p id="8504f264-f469-4c02-abdf-6e55d418e0d8" class="">
+</p></div></p><p id="97b3d10d-47aa-427b-8efc-95ca58aa684f" class="">This example Jesus set for us<div class="indented"><p id="d13ab925-6e86-4033-9909-e61eebf39be0" class="">By giving his life so we could have ours</p><p id="41f66b93-3d75-4606-9b08-bac1e3b84fd5" class="">
+</p></div></p><hr id="3ff25917-6d53-4c58-9250-e1847b5cf9cf"/><p id="ae49de32-e718-4dbd-ae22-4a9feb3a3489" class="">
+</p><p id="438c5f28-cbb5-4f9f-8467-66f8d6544113" class="">Pray for love in all your words<div class="indented"><p id="4da7247f-5bc2-4973-8bcf-53a506d6eb2a" class="">Pray for love in all that you do</p><p id="2b1402b2-8316-402b-94ad-d51b51b2ff14" class="">
+</p></div></p><p id="e64de9d5-524e-4c75-82e3-8ca91a9c5588" class="">Speak pleasantly unto others<div class="indented"><p id="5e9b2f1b-e84f-42a0-b97e-b3499ef15578" class="">Speak the truth</p></div></p><p id="1cac0817-5014-4e04-b486-b320d655b289" class="">Be not two-faced<div class="indented"><p id="bc2f6df4-11d5-4baa-8521-c591132799f0" class="">Choose gentle words</p><p id="185787ba-6202-401f-88f4-bb49bf79edc9" class="">
+</p></div></p><p id="b0e0ff39-0338-4492-9331-6e5cfbbe6f1f" class="">Search out the light in people<div class="indented"><p id="f4a29b0b-64e4-4dd9-8183-3ce0049aae65" class=""> Find the good in what they do</p><p id="edefc23d-f8dd-47ba-9ac9-157941aaaef5" class="">
+</p></div></p><p id="73df4c58-0a03-4b0d-9d17-3b79e88507c3" class="">Be empathetic out of your love<div class="indented"><p id="f30639c8-9c4a-4d41-bb81-ab6c6f274189" class="">Give thought to others feelings</p></div></p><p id="502f25a9-c06c-46ad-b5a2-5f5f8a92ac3a" class="">Consider their perspectives<div class="indented"><p id="1d24209e-e659-4fbb-96d4-e5743404c3e8" class="">Show you feel what they feel</p><p id="96670eb8-2dca-449c-b0b5-fa2b86ce78bb" class="">
+</p></div></p><hr id="1e34ee8f-eaa6-44d1-b267-6e4891ef23dc"/><p id="b87ba271-bd3b-482d-80f5-b379cb96a06a" class="">
+</p><p id="2f684c8e-8295-4830-8efd-e1bc8b935e81" class="">Love may consist of doing good deeds<div class="indented"><p id="f2b3e9e2-e149-4b2b-a45c-fb60dfd40222" class="">Yet the deepest love is unconditional</p></div></p><p id="6cdc40b7-c5cd-4e13-a0bc-9ee01e927a31" class="">Those with God’s Love in their hearts<div class="indented"><p id="2d81d1fb-2177-4bd8-8ade-e30d9ba20c99" class="">Give love without it being earned</p></div></p><p id="96b1ecd2-f167-42f6-92e1-d6a8c1757664" class="">
+</p><p id="76ffcce2-976f-4d84-803c-ce5fd0bf9a07" class="">Be not partial to anyone<div class="indented"><p id="2d0523dd-5700-4428-8412-43a7289098f0" class="">Give love to the unloved</p></div></p><p id="3d8e2322-db72-4263-b3bc-f49a3c4c745b" class="">Give attention to the forgotten<div class="indented"><p id="82bd86d4-98c8-4273-a463-2684e9319b85" class="">Forgive the pariah</p></div></p><p id="0f6ec35d-2cb6-4807-bde5-af9e01346214" class="">
+</p><h3 id="bbccc848-e782-4501-a409-c95f1ad793d2" class="">Supporting Verses</h3><ul id="9335b240-f8ca-4941-99a4-41aa94750b63" class="bulleted-list"><li style="list-style-type:disc">&quot;This is My command to you: Love one another.&quot; - John 15:17</li></ul><ul id="20bc8cc4-4fcf-4821-b466-8bebe9f146d8" class="bulleted-list"><li style="list-style-type:disc">&quot;But I tell you, love your enemies and pray for those who persecute you, that you may be children of your Father in heaven.&quot; - Matthew 5:44-45</li></ul><ul id="e637dcdd-7039-4800-bd65-10380f2541c8" class="bulleted-list"><li style="list-style-type:disc">&quot;Jesus replied: “‘Love the Lord your God with all your heart and with all your soul and with all your mind.’ This is the first and greatest commandment. And the second is like it: ‘Love your neighbor as yourself.’&quot; - Matthew 22:37-39</li></ul><ul id="359ecf2c-05e9-4b1f-99e5-70dc4661b8cd" class="bulleted-list"><li style="list-style-type:disc">Love is always best, and of love there are many kinds</li></ul><ul id="39bd1cb1-948e-499f-9ef7-ba0f2591cd4f" class="bulleted-list"><li style="list-style-type:disc">Love to the fullest, but respect people&#x27;s limits on intimacy</li></ul><ul id="c9585ca2-0543-4c4a-ac50-f4fe33fc910e" class="bulleted-list"><li style="list-style-type:disc">Love is the victor in truth, so truth without love is a half-deed</li></ul><ul id="f2ca7b2d-f5fa-4b48-a772-5175ead41253" class="bulleted-list"><li style="list-style-type:disc">There are many truths to speak, but which is the most productive? Which is the most loving?</li></ul><ul id="e3b4a23e-181f-4cbe-9fee-d4704d6fa717" class="bulleted-list"><li style="list-style-type:disc">If you care for others through hospitality, you will find yourself in peace, only then will you have a blessing to share Good Teaching</li></ul><ul id="3055cb48-0d36-4a32-a0f1-a70925577751" class="bulleted-list"><li style="list-style-type:disc">All people deserve love, Allah, Our Father cares for all of the living</li></ul><ul id="332ae18a-4e25-4ccb-b39c-3a584a7b9684" class="bulleted-list"><li style="list-style-type:disc">When there is nobody left, Allah&#x27;s love remains, when you have failed, Allah&#x27;s love is free to have, His love overpowers death, His love is felt when the humble rise and when the faithful fall</li></ul><p id="c61d21a7-ffc0-4263-85cc-0af535acc999" class="">
+</p><p id="c16a0eec-e66c-4c46-becd-508304a4a121" class="">Love (romantic) for another can pull one into mischief</p><p id="35a82995-886c-459b-90dc-09d230d447da" class="">Always best, but only some kinds (friendly, neighborly)</p><p id="94e50dce-e0b7-408e-b5ea-04610f36c9df" class="">Avoiding sin to avoid hurting or betraying Allah</p><p id="69283d09-6f46-43b4-9cb2-8bca8a51224b" class="">Show support for each other</p></div></article></body></html>
